@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&family=Roboto:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.mode-light {
+  background-color: #fff;
+  color: #000;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 20px;
+  opacity: .8;
+}
+
+.control {
+  transition: 300ms ease-in-out;
+}
+
+.header__nav a {
+  color: rgb(206, 83, 110);
+  text-decoration: none;
+  margin: 10px;
+}
+
+.mode-switcher {
+  background-color: rgb(215, 216, 216);
+  border: 1px solid grey;
+  padding: 10px;
+  border-radius: 99px;
+  width: 60px;
+  height: 30px;
+  margin: 0 10px;
+}
+
+.switcher {
+  background-color: #fff;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  padding: 6px;
+  position: relative;
+  left: 0px;
+  bottom: 5px;
+  cursor: pointer;
+}
+
+.header__switch-mode {
+  display: flex;
+
+}
+
+.settings, .mode {
+  margin-right: 10px;
+}
+
+.mode {
+  margin-top: 5px;
+}
+
+.switch-animation_front-of {
+  animation-name: switch_front-of;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+.switch-animation_back {
+  animation-name: switch_back;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes switch_front-of {
+  0% {
+    left: 0px;
+  }
+
+  100% {
+    left: 22px;
+  }
+}
+
+@keyframes switch_back {
+  0% {
+    left: 22px;
+  }
+
+  100% {
+    left: 0px;
+  }
+}
+
+@media(max-width: 415px) {
+  .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .header__switch-mode {
+    margin-top: 20px;
+  }
+
+  .main h1 {
+    text-align: center;
+  }
+}
+
+.main h1 {
+  font-family: "Qwitcher Grypen";
+  font-size: 128px;
+  color: rgb(72, 72, 72);
+}
+
+.main h3 {
+  color: rgb(72, 72, 72);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
